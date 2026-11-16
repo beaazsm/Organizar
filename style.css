@@ -1,43 +1,145 @@
+/* Configurações básicas */
 body {
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
 }
 
-.cabecalho {
-  display: flex;
-  align-items: center; /* Alinha logo e links na mesma linha horizontal */
-  padding: 15px 40px;
-  background-color: #ffffff;
-  position: relative; /* Necessário para centralizar o menu na tela */
+/* Cabeçalho */
+header {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* 1. Aumentar o tamanho da logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .logo {
-  height: 100px; /* Aumente ou diminua esse valor (ex: 70px, 90px) até ficar do tamanho ideal */
-  width: auto;  /* Mantém a proporção sem achatar a imagem */
-  display: block;
+    width: 45px;
+    height: auto;
 }
 
-/* 2. Centralizar o menu e separar os links igualmente */
-.menu {
-  display: flex;
-  gap: 40px; /* Cria um espaço exatamente igual entre cada palavra/link */
-  
-  /* Centraliza o bloco de links no meio exato da barra */
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+header h1 {
+    margin: 0;
+    color: #2b5876;
+    font-size: 24px;
 }
 
-/* Estilo opcional para deixar os links mais bonitos e fáceis de clicar */
-.menu a {
-  text-decoration: none;
-  color: #333333;
-  font-weight: bold;
-  font-size: 18px;
-  padding: 8px 12px; /* Aumenta a área clicável em volta da palavra */
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-weight: bold;
 }
 
-.menu a:hover {
-  color: #007bff; /* Muda de cor quando passa o mouse */
+nav a:hover {
+    color: #2b5876;
+}
+
+/* Banner inicial */
+.banner {
+    background-color: #2b5876;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.banner h2 {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+.botao-principal {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #ff9f1c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.botao-principal:hover {
+    background-color: #e0860b;
+}
+
+/* Área dos Métodos */
+.container {
+    width: 85%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.container h2 {
+    text-align: center;
+    color: #2b5876;
+    margin-bottom: 30px;
+}
+
+/* Cartões de cada método */
+.card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border-left: 6px solid #2b5876;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #2b5876;
+}
+
+.detalhes {
+    background-color: #f9fbfb;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.detalhes h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.detalhes ul {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.link-video {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #e63946;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.link-video:hover {
+    background-color: #c92a37;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2b5876;
+    color: white;
+    margin-top: 40px;
 }
