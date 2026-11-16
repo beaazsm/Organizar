@@ -13,7 +13,7 @@ body {
 
 /* 1. Aumentar o tamanho da logo */
 .logo {
-  height: 80px; /* Aumente ou diminua esse valor (ex: 70px, 90px) até ficar do tamanho ideal */
+  height: 100px; /* Aumente ou diminua esse valor (ex: 70px, 90px) até ficar do tamanho ideal */
   width: auto;  /* Mantém a proporção sem achatar a imagem */
   display: block;
 }
