@@ -1,34 +1,166 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fokoo - Métodos de Estudo</title>
     <link rel="stylesheet" href="style.css">
-    <title>Métodos de organização para estudo</title>
 </head>
 <body>
 
-    <header class="cabecalho"> 
-         <a href="index.html" class="link-logo">
-          <img class="logo" src="WhatsApp Image 2026-11-16 at 17.33.51.jpeg" alt="logo site">
-         </a> 
-     <nav class="menu">
-         <a href="#inicio">Início</a>
-         <a href="#sobre">Sobre</a>
-         <a href="#metodos">Métodos</a>
-      </nav>   
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo Fokoo" class="logo">
+            <h1>Fokoo</h1>
+        </div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#metodos">Métodos</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
     </header>
 
+    <section id="inicio" class="banner">
+        <h2>Aprenda a estudar de verdade</h2>
+        <p>Descubra as melhores técnicas comprovadas pela ciência para memorizar conteúdos e mandar bem nas provas.</p>
+        <a href="#metodos" class="botao-principal">Ver Métodos</a>
+    </section>
 
+    <main id="metodos" class="container">
+        <h2>Métodos de Estudo</h2>
 
+        <div class="card">
+            <h3>1. Resgate Ativo (Active Recall)</h3>
+            <p><strong>Como funciona:</strong> Em vez de apenas reler textos ou assistir a videoaulas, você força o cérebro a recuperar a informação ativamente (fazendo perguntas para si mesmo, escrevendo o que lembra em uma folha em branco ou respondendo a testes).</p>
+            <p><strong>Por que é famoso:</strong> É considerado pela neurociência uma das técnicas com maior eficácia para fixação na memória de longo prazo.</p>
+            
+            <div class="detalhes">
+                <h4>Passo a passo:</h4>
+                <ul>
+                    <li>Estude o conteúdo normalmente (lendo ou vendo aula).</li>
+                    <li>Feche o caderno ou a aba do vídeo.</li>
+                    <li>Pegue uma folha em branco e escreva tudo o que você lembra sobre o assunto (técnica chamada de <em>brain dump</em>).</li>
+                    <li>Abra o material de novo e veja o que você esqueceu ou errou.</li>
+                </ul>
+                <p><strong>Dica de ouro:</strong> Não tenha medo de errar na hora de lembrar. É justamente o esforço que o cérebro faz para buscar a resposta que fortalece a memória.</p>
+                <a href="https://www.youtube.com/results?search_query=como+fazer+active+recall+resgate+ativo" target="_blank" class="link-video">Ver vídeos sobre Resgate Ativo</a>
+            </div>
+        </div>
 
+        <div class="card">
+            <h3>2. Repetição Espaçada (Curva de Ebbinghaus)</h3>
+            <p><strong>Como funciona:</strong> Você revisa o conteúdo em intervalos de tempo crescentes (por exemplo: 1 dia depois, 4 dias depois, 1 semana depois, 1 mês depois).</p>
+            <p><strong>Por que é famoso:</strong> Combate diretamente o esquecimento natural do cérebro, transformando informações temporárias em aprendizado duradouro.</p>
 
+            <div class="detalhes">
+                <h4>Passo a passo:</h4>
+                <ul>
+                    <li>Estude o assunto hoje (Dia 0).</li>
+                    <li>Faça uma revisão rápida de 10 minutos amanhã (Dia 1).</li>
+                    <li>Revise novamente 4 dias depois.</li>
+                    <li>Faça outra revisão após 7 dias, depois 15 dias e por fim 30 dias.</li>
+                </ul>
+                <p><strong>Dica de ouro:</strong> Use uma planilha simples ou um caderno de controle com datas para não se perder no que precisa revisar em cada dia.</p>
+                <a href="https://www.youtube.com/results?search_query=repeticao+espacada+curva+do+esquecimento" target="_blank" class="link-video">Ver vídeos sobre Repetição Espaçada</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>3. Técnica Pomodoro</h3>
+            <p><strong>Como funciona:</strong> Você divide o estudo em blocos de 25 minutos de foco total, seguidos por 5 minutos de pausa. Após quatro ciclos, faz uma pausa mais longa (de 15 a 30 minutos).</p>
+            <p><strong>Por que é famoso:</strong> Ajuda a combater a procrastinação e a fadiga mental, mantendo a concentração em níveis altos.</p>
+
+            <div class="detalhes">
+                <h4>Passo a passo:</h4>
+                <ul>
+                    <li>Escolha uma única tarefa para fazer.</li>
+                    <li>Coloque um cronômetro para 25 minutos e estude sem olhar o celular.</li>
+                    <li>Quando o alarme tocar, pare tudo e descanse por 5 minutos (beba água, alongue o corpo).</li>
+                    <li>Repita o processo 4 vezes e depois tire 20 minutos de descanso livre.</li>
+                </ul>
+                <p><strong>Dica de ouro:</strong> Nos 5 minutos de pausa, evite entrar em redes sociais de vídeos curtos, pois isso cansa o cérebro em vez de descansar.</p>
+                <a href="https://www.youtube.com/results?search_query=tecnica+pomodoro+como+funciona" target="_blank" class="link-video">Ver vídeos sobre Técnica Pomodoro</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>4. Método Feynman (Autoexplicação)</h3>
+            <p><strong>Como funciona:</strong> Você tenta explicar o conceito estudado com as suas próprias palavras, como se estivesse ensinando uma criança ou uma pessoa leiga no assunto. Se travar em algum ponto, você identifica exatamente o que não entendeu e volta ao material.</p>
+            <p><strong>Por que é famoso:</strong> Elimina a falsa sensação de aprendizado e expõe as lacunas reais do seu conhecimento.</p>
+
+            <div class="detalhes">
+                <h4>Passo a passo:</h4>
+                <ul>
+                    <li>Escreva o nome do tema no topo de uma folha.</li>
+                    <li>Explique o assunto em voz alta ou por escrito usando palavras bem simples, sem termos difíceis.</li>
+                    <li>Percebeu que gaguejou ou não soube explicar uma parte? Volte ao livro ou aula apenas naquele trecho.</li>
+                    <li>Reescreva a explicação de forma ainda mais simples e com exemplos do dia a dia.</li>
+                </ul>
+                <p><strong>Dica de ouro:</strong> Se você não consegue explicar algo de forma simples, é sinal de que ainda não entendeu bem o suficiente.</p>
+                <a href="https://www.youtube.com/results?search_query=metodo+feynman+como+estudar" target="_blank" class="link-video">Ver vídeos sobre Método Feynman</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>5. Mapas Mentais</h3>
+            <p><strong>Como funciona:</strong> Você cria diagramas visuais com uma ideia central no meio e ramificações conectando palavras-chave, cores, setas e pequenos desenhos.</p>
+            <p><strong>Por que é famoso:</strong> É excelente para quem tem memória visual e precisa enxergar como os conceitos se conectam de forma lógica.</p>
+
+            <div class="detalhes">
+                <h4>Passo a passo:</h4>
+                <ul>
+                    <li>Vire a folha na horizontal (deitada) e escreva o tema principal bem no centro.</li>
+                    <li>Puxe galhos grossos a partir do centro para os subtemas principais.</li>
+                    <li>De cada galho, puxe ramos menores com apenas palavras-chave (nada de frases longas).</li>
+                    <li>Use canetas coloridas diferentes para cada ramo e faça pequenos ícones.</li>
+                </ul>
+                <p><strong>Dica de ouro:</strong> Nunca copie um mapa mental pronto da internet. O aprendizado acontece enquanto o seu cérebro organiza as ideias para desenhar.</p>
+                <a href="https://www.youtube.com/results?search_query=como+fazer+mapa+mental+estudos" target="_blank" class="link-video">Ver vídeos sobre Mapas Mentais</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>6. Flashcards</h3>
+            <p><strong>Como funciona:</strong> São pequenos cartões físicos ou digitais (using aplicativos como o Anki). De um lado você coloca uma pergunta ou termo-chave; do outro, a resposta.</p>
+            <p><strong>Por que é famoso:</strong> Perfeito para memorizar fórmulas, vocabulário, datas e leis de forma rápida e portátil.</p>
+
+            <div class="detalhes">
+                <h4>Passo a passo:</h4>
+                <ul>
+                    <li>Corte folhas de papel em retângulos pequenos ou baixe um app de flashcards.</li>
+                    <li>Na frente do cartão, escreva uma pergunta direta (ex: "Qual a fórmula da velocidade média?").</li>
+                    <li>No verso, coloque apenas a resposta curta.</li>
+                    <li>Embaralhe os cartões, leia a frente, tente responder mentalmente e vire para conferir.</li>
+                </ul>
+                <p><strong>Dica de ouro:</strong> Coloque apenas uma informação por cartão. Cartões cheios de texto viram resumos difíceis de decorar.</p>
+                <a href="https://www.youtube.com/results?search_query=como+usar+flashcards+para+estudar" target="_blank" class="link-video">Ver vídeos sobre Flashcards</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>7. Método SQ3R (ou EPL2R)</h3>
+            <p><strong>Como funciona:</strong> Um método estruturado para leitura de livros e artigos dividido em etapas: Survey (Explorar), Question (Perguntar), Read (Ler), Recite (Recitar) e Review (Revisar).</p>
+            <p><strong>Por que é famoso:</strong> Transforma uma leitura passiva em uma investigação ativa do texto.</p>
+
+            <div class="detalhes">
+                <h4>Passo a passo:</h4>
+                <ul>
+                    <li><strong>Explorar:</strong> Passe o olho pelos títulos, subtítulos, imagens e negritos antes de ler tudo.</li>
+                    <li><strong>Perguntar:</strong> Transforme os títulos em perguntas (ex: se o título é "Causas da Guerra", pergunte "Quais foram as causas?").</li>
+                    <li><strong>Ler:</strong> Leia o texto focado em encontrar as respostas para as perguntas que você criou.</li>
+                    <li><strong>Recitar:</strong> Ao fim de cada página, pare e diga com suas palavras o que entendeu.</li>
+                    <li><strong>Revisar:</strong> Releia suas anotações gerais ao terminar o capítulo.</li>
+                </ul>
+                <p><strong>Dica de ouro:</strong> Esse método é ideal para textos longos de apostilas e livros didáticos que costumam dar sono.</p>
+                <a href="https://www.youtube.com/results?search_query=metodo+sq3r+epl2r+leitura" target="_blank" class="link-video">Ver vídeos sobre o Método SQ3R</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="sobre">
+        <p>Fokoo - Feito para ajudar estudantes a aprenderem melhor.</p>
+    </footer>
 
 </body>
-
-
-
-
-
 </html>
