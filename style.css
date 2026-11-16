@@ -1,145 +1,256 @@
-/* Configurações básicas */
+/* Configuração Geral */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: #f8f9fa;
+    color: #2b2d42;
 }
 
 /* Cabeçalho */
 header {
     background-color: #ffffff;
-    padding: 15px 30px;
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .logo {
-    width: 45px;
+    width: 50px;
     height: auto;
 }
 
-header h1 {
-    margin: 0;
-    color: #2b5876;
-    font-size: 24px;
+.logo-text {
+    font-size: 26px;
+    font-weight: 800;
+    color: #0077b6;
+    letter-spacing: -0.5px;
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
-    margin-left: 20px;
-    font-weight: bold;
+    color: #495057;
+    margin-left: 25px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: color 0.2s;
 }
 
 nav a:hover {
-    color: #2b5876;
+    color: #f77f00;
 }
 
-/* Banner inicial */
+/* Banner Principal */
 .banner {
-    background-color: #2b5876;
+    background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 70px 20px;
 }
 
 .banner h2 {
+    font-size: 38px;
     margin-top: 0;
-    font-size: 32px;
+    font-weight: 800;
+}
+
+.banner p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 15px auto 25px auto;
+    opacity: 0.95;
 }
 
 .botao-principal {
     display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background-color: #ff9f1c;
+    padding: 14px 30px;
+    background-color: #f77f00;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+    border-radius: 30px;
+    font-weight: 800;
+    box-shadow: 0 4px 15px rgba(247, 127, 0, 0.4);
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 .botao-principal:hover {
-    background-color: #e0860b;
+    background-color: #d66f00;
+    transform: translateY(-2px);
 }
 
-/* Área dos Métodos */
+/* Seção Pomodoro */
+.pomodoro-section {
+    display: flex;
+    justify-content: center;
+    margin: -35px auto 20px auto;
+    position: relative;
+    z-index: 10;
+}
+
+.pomodoro-card {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    border: 3px solid #ffb703;
+}
+
+.pomodoro-card h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.timer-display {
+    font-size: 42px;
+    font-weight: 800;
+    color: #d90429;
+    margin-bottom: 15px;
+}
+
+.timer-botoes {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-pomodoro {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-pomodoro.iniciar { background-color: #52b788; }
+.btn-pomodoro.pausar { background-color: #ffb703; color: #333; }
+.btn-pomodoro.resetar { background-color: #e63946; }
+
+/* Container dos Métodos */
 .container {
     width: 85%;
     max-width: 900px;
-    margin: 30px auto;
+    margin: 40px auto;
 }
 
-.container h2 {
+.container > h2 {
     text-align: center;
-    color: #2b5876;
-    margin-bottom: 30px;
+    color: #0077b6;
+    font-size: 30px;
+    margin-bottom: 35px;
+    font-weight: 800;
 }
 
-/* Cartões de cada método */
+/* Cartões */
 .card {
     background-color: white;
-    padding: 25px;
+    padding: 30px;
     margin-bottom: 25px;
-    border-radius: 8px;
-    border-left: 6px solid #2b5876;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    border-left: 8px solid #0077b6;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
 }
 
 .card h3 {
     margin-top: 0;
-    color: #2b5876;
+    color: #1d3557;
+    font-size: 22px;
 }
 
 .detalhes {
-    background-color: #f9fbfb;
-    padding: 15px;
-    border-radius: 6px;
-    margin-top: 15px;
+    background-color: #f1faee;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
 .detalhes h4 {
     margin-top: 0;
-    margin-bottom: 10px;
-    color: #444;
+    color: #2b2d42;
 }
 
 .detalhes ul {
     padding-left: 20px;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .link-video {
     display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
+    margin-top: 15px;
+    padding: 10px 18px;
     background-color: #e63946;
     color: white;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
+    transition: background-color 0.2s;
 }
 
 .link-video:hover {
-    background-color: #c92a37;
+    background-color: #d90429;
+}
+
+/* Tracker de Estudos */
+.tracker-section {
+    background-color: #e9ecef;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.tracker-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.tracker-container h3 {
+    margin-top: 0;
+    color: #0077b6;
+}
+
+#lista-checklist {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-checklist li {
+    margin: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#lista-checklist input {
+    margin-right: 10px;
+    transform: scale(1.2);
+    accent-color: #52b788;
 }
 
 /* Rodapé */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #2b5876;
+    padding: 25px;
+    background-color: #1d3557;
     color: white;
-    margin-top: 40px;
+    font-weight: 600;
 }
