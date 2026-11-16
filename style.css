@@ -5,14 +5,39 @@ body {
 
 .cabecalho {
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
-  padding: 15px 30px;
+  align-items: center; /* Alinha logo e links na mesma linha horizontal */
+  padding: 15px 40px;
   background-color: #ffffff;
+  position: relative; /* Necessário para centralizar o menu na tela */
 }
 
+/* 1. Aumentar o tamanho da logo */
 .logo {
-  height: 50px; 
-  width: auto;
+  height: 80px; /* Aumente ou diminua esse valor (ex: 70px, 90px) até ficar do tamanho ideal */
+  width: auto;  /* Mantém a proporção sem achatar a imagem */
   display: block;
+}
+
+/* 2. Centralizar o menu e separar os links igualmente */
+.menu {
+  display: flex;
+  gap: 40px; /* Cria um espaço exatamente igual entre cada palavra/link */
+  
+  /* Centraliza o bloco de links no meio exato da barra */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Estilo opcional para deixar os links mais bonitos e fáceis de clicar */
+.menu a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 12px; /* Aumenta a área clicável em volta da palavra */
+}
+
+.menu a:hover {
+  color: #007bff; /* Muda de cor quando passa o mouse */
 }
