@@ -3,33 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fokoo - Métodos de Estudo</title>
+    <title>Fokoo - Planear, Estudar, Conquistar</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Fonte Nunito para dar um toque moderno e amigável -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <div class="logo-container">
-            <img src="WhatsApp Image 2026-11-16 at 17.33.51.jpeg" alt="Logo Fokoo" class="logo">
-            <h1>Fokoo</h1>
+            <img src="logo.png" alt="Logo Fokoo" class="logo">
+            <span class="logo-text">Fokoo</span>
         </div>
         <nav>
             <a href="#inicio">Início</a>
             <a href="#metodos">Métodos</a>
-            <a href="#sobre">Sobre</a>
+            <a href="#pomodoro">Pomodoro</a>
+            <a href="#tracker">Meu Progresso</a>
         </nav>
     </header>
 
     <section id="inicio" class="banner">
-        <h2>Aprenda a estudar de verdade</h2>
-        <p>Descubra as melhores técnicas comprovadas pela ciência para memorizar conteúdos e mandar bem nas provas.</p>
-        <a href="#metodos" class="botao-principal">Ver Métodos</a>
+        <div class="banner-conteudo">
+            <h2>Planear, Estudar, Conquistar</h2>
+            <p>Descubra as melhores técnicas validadas pela ciência para transformar seus estudos e mandar muito bem nas provas.</p>
+            <a href="#metodos" class="botao-principal">Explorar Métodos</a>
+        </div>
+    </section>
+
+    <!-- Seção do Pomodoro Rápido -->
+    <section id="pomodoro" class="pomodoro-section">
+        <div class="pomodoro-card">
+            <h3>⏱️ Pomodoro Rápido</h3>
+            <div id="timer" class="timer-display">25:00</div>
+            <div class="timer-botoes">
+                <button onclick="iniciarPomodoro()" class="btn-pomodoro iniciar">Iniciar</button>
+                <button onclick="pausarPomodoro()" class="btn-pomodoro pausar">Pausar</button>
+                <button onclick="resetarPomodoro()" class="btn-pomodoro resetar">Zerar</button>
+            </div>
+        </div>
     </section>
 
     <main id="metodos" class="container">
-        <h2>Métodos de Estudo</h2>
+        <h2>Métodos de Estudo Oficiais</h2>
 
-        <div class="card">
+        <div class="card" style="border-left-color: #00b4d8;">
             <h3>1. Resgate Ativo (Active Recall)</h3>
             <p><strong>Como funciona:</strong> Em vez de apenas reler textos ou assistir a videoaulas, você força o cérebro a recuperar a informação ativamente (fazendo perguntas para si mesmo, escrevendo o que lembra em uma folha em branco ou respondendo a testes).</p>
             <p><strong>Por que é famoso:</strong> É considerado pela neurociência uma das técnicas com maior eficácia para fixação na memória de longo prazo.</p>
@@ -37,17 +55,17 @@
             <div class="detalhes">
                 <h4>Passo a passo:</h4>
                 <ul>
-                    <li>Estude o conteúdo normalmente (lendo ou vendo aula).</li>
-                    <li>Feche o caderno ou a aba do vídeo.</li>
-                    <li>Pegue uma folha em branco e escreva tudo o que você lembra sobre o assunto (técnica chamada de <em>brain dump</em>).</li>
-                    <li>Abra o material de novo e veja o que você esqueceu ou errou.</li>
+                    <li>Estude o conteúdo normalmente por um curto período.</li>
+                    <li>Feche o caderno ou a aba do vídeo completamente.</li>
+                    <li>Pegue uma folha em branco e escreva tudo o que conseguir lembrar (técnica do <em>brain dump</em>).</li>
+                    <li>Abra o material original e confira o que faltou ou o que você errou.</li>
                 </ul>
-                <p><strong>Dica de ouro:</strong> Não tenha medo de errar na hora de lembrar. É justamente o esforço que o cérebro faz para buscar a resposta que fortalece a memória.</p>
-                <a href="https://www.youtube.com/results?search_query=como+fazer+active+recall+resgate+ativo" target="_blank" class="link-video">Ver vídeos sobre Resgate Ativo</a>
+                <p><strong>Dica de ouro:</strong> O esforço de busca é o que faz o seu cérebro criar conexões fortes!</p>
+                <a href="https://www.youtube.com/results?search_query=como+fazer+active+recall+resgate+ativo" target="_blank" class="link-video">Ver vídeos no YouTube</a>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" style="border-left-color: #52b788;">
             <h3>2. Repetição Espaçada (Curva de Ebbinghaus)</h3>
             <p><strong>Como funciona:</strong> Você revisa o conteúdo em intervalos de tempo crescentes (por exemplo: 1 dia depois, 4 dias depois, 1 semana depois, 1 mês depois).</p>
             <p><strong>Por que é famoso:</strong> Combate diretamente o esquecimento natural do cérebro, transformando informações temporárias em aprendizado duradouro.</p>
@@ -55,17 +73,16 @@
             <div class="detalhes">
                 <h4>Passo a passo:</h4>
                 <ul>
-                    <li>Estude o assunto hoje (Dia 0).</li>
-                    <li>Faça uma revisão rápida de 10 minutos amanhã (Dia 1).</li>
-                    <li>Revise novamente 4 dias depois.</li>
-                    <li>Faça outra revisão após 7 dias, depois 15 dias e por fim 30 dias.</li>
+                    <li>Estude o assunto no Dia 0.</li>
+                    <li>Faça uma revisão rápida de 10 minutos no Dia 1.</li>
+                    <li>Revise novamente no Dia 4, Dia 7 e Dia 30.</li>
                 </ul>
-                <p><strong>Dica de ouro:</strong> Use uma planilha simples ou um caderno de controle com datas para não se perder no que precisa revisar em cada dia.</p>
-                <a href="https://www.youtube.com/results?search_query=repeticao+espacada+curva+do+esquecimento" target="_blank" class="link-video">Ver vídeos sobre Repetição Espaçada</a>
+                <p><strong>Dica de ouro:</strong> Use aplicativos como o Anki ou uma agenda física para rastrear o que precisa ser revisado a cada dia.</p>
+                <a href="https://www.youtube.com/results?search_query=repeticao+espacada+curva+do+esquecimento" target="_blank" class="link-video">Ver vídeos no YouTube</a>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" style="border-left-color: #f77f00;">
             <h3>3. Técnica Pomodoro</h3>
             <p><strong>Como funciona:</strong> Você divide o estudo em blocos de 25 minutos de foco total, seguidos por 5 minutos de pausa. Após quatro ciclos, faz uma pausa mais longa (de 15 a 30 minutos).</p>
             <p><strong>Por que é famoso:</strong> Ajuda a combater a procrastinação e a fadiga mental, mantendo a concentração em níveis altos.</p>
@@ -73,17 +90,16 @@
             <div class="detalhes">
                 <h4>Passo a passo:</h4>
                 <ul>
-                    <li>Escolha uma única tarefa para fazer.</li>
-                    <li>Coloque um cronômetro para 25 minutos e estude sem olhar o celular.</li>
-                    <li>Quando o alarme tocar, pare tudo e descanse por 5 minutos (beba água, alongue o corpo).</li>
-                    <li>Repita o processo 4 vezes e depois tire 20 minutos de descanso livre.</li>
+                    <li>Escolha uma única tarefa para realizar.</li>
+                    <li>Ative um cronômetro de 25 minutos sem olhar o telemóvel/celular.</li>
+                    <li>Quando o alarme tocar, pare imediatamente e descanse por 5 minutos.</li>
                 </ul>
-                <p><strong>Dica de ouro:</strong> Nos 5 minutos de pausa, evite entrar em redes sociais de vídeos curtos, pois isso cansa o cérebro em vez de descansar.</p>
-                <a href="https://www.youtube.com/results?search_query=tecnica+pomodoro+como+funciona" target="_blank" class="link-video">Ver vídeos sobre Técnica Pomodoro</a>
+                <p><strong>Dica de ouro:</strong> Durante os 5 minutos de pausa, levante, beba água e descanse os olhos longe de telas.</p>
+                <a href="https://www.youtube.com/results?search_query=tecnica+pomodoro+como+funciona" target="_blank" class="link-video">Ver vídeos no YouTube</a>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" style="border-left-color: #e63946;">
             <h3>4. Método Feynman (Autoexplicação)</h3>
             <p><strong>Como funciona:</strong> Você tenta explicar o conceito estudado com as suas próprias palavras, como se estivesse ensinando uma criança ou uma pessoa leiga no assunto. Se travar em algum ponto, você identifica exatamente o que não entendeu e volta ao material.</p>
             <p><strong>Por que é famoso:</strong> Elimina a falsa sensação de aprendizado e expõe as lacunas reais do seu conhecimento.</p>
@@ -91,17 +107,16 @@
             <div class="detalhes">
                 <h4>Passo a passo:</h4>
                 <ul>
-                    <li>Escreva o nome do tema no topo de uma folha.</li>
-                    <li>Explique o assunto em voz alta ou por escrito usando palavras bem simples, sem termos difíceis.</li>
-                    <li>Percebeu que gaguejou ou não soube explicar uma parte? Volte ao livro ou aula apenas naquele trecho.</li>
-                    <li>Reescreva a explicação de forma ainda mais simples e com exemplos do dia a dia.</li>
+                    <li>Escreva o tema no topo de uma folha.</li>
+                    <li>Explique o assunto em voz alta usando linguagem simples, sem jargões difíceis.</li>
+                    <li>Identifique onde você gaguejou e releia apenas esse trecho.</li>
                 </ul>
-                <p><strong>Dica de ouro:</strong> Se você não consegue explicar algo de forma simples, é sinal de que ainda não entendeu bem o suficiente.</p>
-                <a href="https://www.youtube.com/results?search_query=metodo+feynman+como+estudar" target="_blank" class="link-video">Ver vídeos sobre Método Feynman</a>
+                <p><strong>Dica de ouro:</strong> Se você não consegue explicar algo de forma simples, significa que ainda precisa estudar mais um pouco.</p>
+                <a href="https://www.youtube.com/results?search_query=metodo+feynman+como+estudar" target="_blank" class="link-video">Ver vídeos no YouTube</a>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" style="border-left-color: #ffb703;">
             <h3>5. Mapas Mentais</h3>
             <p><strong>Como funciona:</strong> Você cria diagramas visuais com uma ideia central no meio e ramificações conectando palavras-chave, cores, setas e pequenos desenhos.</p>
             <p><strong>Por que é famoso:</strong> É excelente para quem tem memória visual e precisa enxergar como os conceitos se conectam de forma lógica.</p>
@@ -109,35 +124,33 @@
             <div class="detalhes">
                 <h4>Passo a passo:</h4>
                 <ul>
-                    <li>Vire a folha na horizontal (deitada) e escreva o tema principal bem no centro.</li>
-                    <li>Puxe galhos grossos a partir do centro para os subtemas principais.</li>
-                    <li>De cada galho, puxe ramos menores com apenas palavras-chave (nada de frases longas).</li>
-                    <li>Use canetas coloridas diferentes para cada ramo e faça pequenos ícones.</li>
+                    <li>Coloque o tema principal no centro da folha na horizontal.</li>
+                    <li>Puxe ramificações principais para os subtópicos com palavras-chave curtas.</li>
+                    <li>Utilize cores diferentes para cada ramo e adicione pequenos ícones.</li>
                 </ul>
-                <p><strong>Dica de ouro:</strong> Nunca copie um mapa mental pronto da internet. O aprendizado acontece enquanto o seu cérebro organiza as ideias para desenhar.</p>
-                <a href="https://www.youtube.com/results?search_query=como+fazer+mapa+mental+estudos" target="_blank" class="link-video">Ver vídeos sobre Mapas Mentais</a>
+                <p><strong>Dica de ouro:</strong> O ato de desenhar e organizar as cores à mão ajuda o cérebro a memorizar muito mais rápido.</p>
+                <a href="https://www.youtube.com/results?search_query=como+fazer+mapa+mental+estudos" target="_blank" class="link-video">Ver vídeos no YouTube</a>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" style="border-left-color: #4361ee;">
             <h3>6. Flashcards</h3>
-            <p><strong>Como funciona:</strong> São pequenos cartões físicos ou digitais (using aplicativos como o Anki). De um lado você coloca uma pergunta ou termo-chave; do outro, a resposta.</p>
+            <p><strong>Como funciona:</strong> São pequenos cartões físicos ou digitais (usando aplicativos como o Anki). De um lado você coloca uma pergunta ou termo-chave; do outro, a resposta.</p>
             <p><strong>Por que é famoso:</strong> Perfeito para memorizar fórmulas, vocabulário, datas e leis de forma rápida e portátil.</p>
 
             <div class="detalhes">
                 <h4>Passo a passo:</h4>
                 <ul>
-                    <li>Corte folhas de papel em retângulos pequenos ou baixe um app de flashcards.</li>
-                    <li>Na frente do cartão, escreva uma pergunta direta (ex: "Qual a fórmula da velocidade média?").</li>
-                    <li>No verso, coloque apenas a resposta curta.</li>
-                    <li>Embaralhe os cartões, leia a frente, tente responder mentalmente e vire para conferir.</li>
+                    <li>Escreva uma pergunta direta na frente do cartão.</li>
+                    <li>Coloque a resposta curta e direta no verso.</li>
+                    <li>Teste-se regularmente separando os cartões que errou.</li>
                 </ul>
-                <p><strong>Dica de ouro:</strong> Coloque apenas uma informação por cartão. Cartões cheios de texto viram resumos difíceis de decorar.</p>
-                <a href="https://www.youtube.com/results?search_query=como+usar+flashcards+para+estudar" target="_blank" class="link-video">Ver vídeos sobre Flashcards</a>
+                <p><strong>Dica de ouro:</strong> Mantenha uma informação por cartão para evitar respostas confusas.</p>
+                <a href="https://www.youtube.com/results?search_query=como+usar+flashcards+para+estudar" target="_blank" class="link-video">Ver vídeos no YouTube</a>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" style="border-left-color: #7209b7;">
             <h3>7. Método SQ3R (ou EPL2R)</h3>
             <p><strong>Como funciona:</strong> Um método estruturado para leitura de livros e artigos dividido em etapas: Survey (Explorar), Question (Perguntar), Read (Ler), Recite (Recitar) e Review (Revisar).</p>
             <p><strong>Por que é famoso:</strong> Transforma uma leitura passiva em uma investigação ativa do texto.</p>
@@ -145,22 +158,75 @@
             <div class="detalhes">
                 <h4>Passo a passo:</h4>
                 <ul>
-                    <li><strong>Explorar:</strong> Passe o olho pelos títulos, subtítulos, imagens e negritos antes de ler tudo.</li>
-                    <li><strong>Perguntar:</strong> Transforme os títulos em perguntas (ex: se o título é "Causas da Guerra", pergunte "Quais foram as causas?").</li>
-                    <li><strong>Ler:</strong> Leia o texto focado em encontrar as respostas para as perguntas que você criou.</li>
-                    <li><strong>Recitar:</strong> Ao fim de cada página, pare e diga com suas palavras o que entendeu.</li>
-                    <li><strong>Revisar:</strong> Releia suas anotações gerais ao terminar o capítulo.</li>
+                    <li><strong>Explorar:</strong> Passe os olhos por títulos, subtítulos e imagens antes da leitura profunda.</li>
+                    <li><strong>Perguntar:</strong> Transforme os títulos em perguntas orientadoras.</li>
+                    <li><strong>Ler, Recitar e Revisar:</strong> Busque as respostas, resuma com suas próprias palavras e revise ao final.</li>
                 </ul>
-                <p><strong>Dica de ouro:</strong> Esse método é ideal para textos longos de apostilas e livros didáticos que costumam dar sono.</p>
-                <a href="https://www.youtube.com/results?search_query=metodo+sq3r+epl2r+leitura" target="_blank" class="link-video">Ver vídeos sobre o Método SQ3R</a>
+                <p><strong>Dica de ouro:</strong> Excelente para leituras densas e capítulos longos de apostilas.</p>
+                <a href="https://www.youtube.com/results?search_query=metodo+sq3r+epl2r+leitura" target="_blank" class="link-video">Ver vídeos no YouTube</a>
             </div>
         </div>
 
     </main>
 
-    <footer id="sobre">
-        <p>Fokoo - Feito para ajudar estudantes a aprenderem melhor.</p>
+    <!-- Seção de Tracker Interativo -->
+    <section id="tracker" class="tracker-section">
+        <div class="tracker-container">
+            <h3>📌 Meu Progresso de Estudos</h3>
+            <p>Marque os métodos que você já praticou hoje:</p>
+            <ul id="lista-checklist">
+                <li><label><input type="checkbox"> Resgate Ativo</label></li>
+                <li><label><input type="checkbox"> Repetição Espaçada</label></li>
+                <li><label><input type="checkbox"> Técnica Pomodoro</label></li>
+                <li><label><input type="checkbox"> Método Feynman</label></li>
+                <li><label><input type="checkbox"> Mapas Mentais</label></li>
+                <li><label><input type="checkbox"> Flashcards</label></li>
+                <li><label><input type="checkbox"> Método SQ3R</label></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Fokoo © 2026 — Planear, Estudar, Conquistar 🚀</p>
     </footer>
 
+    <script>
+        // Script simples para o cronômetro Pomodoro
+        let tempoRestante = 25 * 60;
+        let intervalo = null;
+
+        function atualizarDisplay() {
+            let minutos = Math.floor(tempoRestante / 60);
+            let segundos = tempoRestante % 60;
+            document.getElementById('timer').innerText = 
+                String(minutos).padStart(2, '0') + ':' + String(segundos).padStart(2, '0');
+        }
+
+        function iniciarPomodoro() {
+            if (intervalo) return;
+            intervalo = setInterval(() => {
+                if (tempoRestante > 0) {
+                    tempoRestante--;
+                    atualizarDisplay();
+                } else {
+                    clearInterval(intervalo);
+                    intervalo = null;
+                    alert('Tempo esgotado! Hora de fazer uma pausa.');
+                }
+            }, 1000);
+        }
+
+        function pausarPomodoro() {
+            clearInterval(intervalo);
+            intervalo = null;
+        }
+
+        function resetarPomodoro() {
+            clearInterval(intervalo);
+            intervalo = null;
+            tempoRestante = 25 * 60;
+            atualizarDisplay();
+        }
+    </script>
 </body>
 </html>
